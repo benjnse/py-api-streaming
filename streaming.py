@@ -22,7 +22,7 @@ def connect_to_stream():
 
     try:
         s = requests.Session()
-        url = "https://<domain>/v1/quote"
+        url = "https://<domain>/v1/prices"
         headers = {'Authorization' : 'Bearer <your access token>'}
         params = {'instruments' : 'EUR_USD,USD_CAD', 'accountId' : '<your account ID>'}
         req = requests.Request('GET', url, headers = headers, params = params)
