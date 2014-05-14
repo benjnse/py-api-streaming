@@ -1,7 +1,7 @@
 py-api-streaming
 ================
 
-A Python application that connects to OANDA's HTTP based rates stream.
+A sample Python application that connects to OANDA's HTTP based rates stream.
 
 ### Setup
 
@@ -15,15 +15,13 @@ Update the following values in the connect_to_stream method in streaming.py
 
 ### Usage
 
----
-
 ~~~
 python streaming.py [options]
 ~~~
 
 #### Options
 
--b (or --displayHeartBeat)
+**-b**, **--displayHeartBeat**
 : _Optional_ Toggles the displaying of the stream's heartbeats.  No heartbeats are displayed by default.
 
 ### Sample Output
