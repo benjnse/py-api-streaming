@@ -1,25 +1,30 @@
 py-api-streaming
 ================
 
-A demo app in Python for streaming rates using OANDA open api
+A Python application that connects to OANDA's HTTP based rates stream.
 
 ### Setup
 
 Clone this repo to the location of your choice
 
-Update the following information in connect_to_stream method in streaming.py:
+Update the following values in the connect_to_stream method in streaming.py
 
-    domain
-    accountId
-    access token (Authorization)
+* domain
+* accountId
+* access token (Authorization)
 
-To execute, run the following command:
+### Usage
 
-    python streaming.py [options]
+---
 
-    options:
+~~~
+python streaming.py [options]
+~~~
 
-    -b (or --displayHeartBeat):    A flag to determine whether HeartBeat will be displayed
+#### Options
+
+-b (or --displayHeartBeat)
+: _Optional_ Toggles the displaying of the stream's heartbeats.  No heartbeats are displayed by default.
 
 ### Sample Output
 
@@ -30,4 +35,4 @@ To execute, run the following command:
 
 ### More Information
 
-http://developer.oanda.com/
+[http://developer.oanda.com/](http://developer.oanda.com/docs/v1/stream/#rates-streaming)
