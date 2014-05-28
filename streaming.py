@@ -15,16 +15,22 @@ from optparse import OptionParser
 
 def connect_to_stream():
     """
-    For your testing, please use a proper domain (like stream-fxpractice/fxtrade) with your access token and account ID
 
-    Feel free to include more instruments (10 instruments at most)
+    Environment           <Domain>
+    fxTrade               stream-fxtrade.oanda.com
+    fxTrade Practice      stream-fxpractice.oanda.com
+    sandbox               stream-sandbox.oanda.com
     """
 
     try:
         s = requests.Session()
+        # Replace <domain> with the domain names listed above
         url = "https://<domain>/v1/prices"
-        headers = {'Authorization' : 'Bearer <your access token>'}
-        params = {'instruments' : 'EUR_USD,USD_CAD', 'accountId' : '<your account ID>'}
+        # Replace <access token> with your OANDA personal access token.
+        headers = {'Authorization' : 'Bearer <access token>'}
+        # Replace <account ID> with your OANDA account ID
+        # instrument list is comma separated.
+        params = {'instruments' : 'EUR_USD,USD_CAD', 'accountId' : '<account ID>'}
         req = requests.Request('GET', url, headers = headers, params = params)
         pre = req.prepare()
         resp = s.send(pre, stream = True, verify = False)
