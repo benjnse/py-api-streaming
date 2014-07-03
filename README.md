@@ -10,8 +10,9 @@ Clone this repo to the location of your choice
 Update the following values in the connect_to_stream method in streaming.py
 
 * domain
-* accountId
-* access token (Authorization)
+* account_id
+* access_token (Authorization)
+* instruments
 
 ### Usage
 
